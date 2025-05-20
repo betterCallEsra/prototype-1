@@ -72,7 +72,7 @@ export function AuthLayout({
             color="inherit"
             sx={{ typography: "subtitle2" }}
           >
-            Need help?
+            right component?
           </Link>
         </Box>
       ),
