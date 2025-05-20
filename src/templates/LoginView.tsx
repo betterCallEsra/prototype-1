@@ -14,7 +14,6 @@ import InputAdornment from "@mui/material/InputAdornment";
 
 import { useRouter } from "../hooks/use-router";
 
-// import { login } from 'src/api/auth';
 import { mockLogin as login } from "../api/auth";
 
 import { Iconify } from "../components/iconify";
