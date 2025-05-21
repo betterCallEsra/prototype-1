@@ -1,3 +1,4 @@
+import React from "react";
 import type { AxiosError } from "axios";
 
 import { useState } from "react";
@@ -28,7 +29,7 @@ export function LoginView() {
 
   const mutation = useMutation({
     mutationFn: login,
-    onSuccess: (data) => {
+    onSuccess: () => {
       router.push("/dashboard");
     },
     onError: (error) => {
