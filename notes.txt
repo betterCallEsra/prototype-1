@@ -4,7 +4,12 @@ https://www.udemy.com/course/typescript-the-complete-developers-guide/?couponCod
 - another typescript free course ??
 https://www.totaltypescript.com/tutorials/beginners-typescript
 
+- react component lifecycle: (just a revision)
+https://egghead.io/lessons/react-understand-the-react-component-lifecycle-methods
+
 - choosing a state manager:
     = redux toolkit
-    = xstate
     = zustand
+    = xstate: a big no, super complicated
+
+- redux vs zustand (explanation, )
