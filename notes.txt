@@ -1,2 +1,9 @@
 - typescript course:
 https://www.udemy.com/course/typescript-the-complete-developers-guide/?couponCode=CP130525
+
+- choosing a state manager:
+    = redux toolkit
+    = xstate
+    = zustand
+
+-
