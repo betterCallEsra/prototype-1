@@ -1,0 +1,2 @@
+- typescript course:
+https://www.udemy.com/course/typescript-the-complete-developers-guide/?couponCode=CP130525
