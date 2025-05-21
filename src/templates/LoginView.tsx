@@ -72,6 +72,7 @@ export function LoginView() {
       >
         <TextField
           fullWidth
+          inputProps={{ "data-testid": "email-input" }}
           label="Email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -84,6 +85,8 @@ export function LoginView() {
 
         <TextField
           fullWidth
+          inputProps={{ "data-testid": "password-input" }}
+          data-testid="error-message"
           label="Password"
           type={showPassword ? "text" : "password"}
           value={password}
@@ -108,13 +111,14 @@ export function LoginView() {
         />
 
         {errorMessage && (
-          <Typography color="error" sx={{ mb: 2 }}>
+          <Typography color="error" data-testid="error-message" sx={{ mb: 2 }}>
             {errorMessage}
           </Typography>
         )}
 
         <Button
           fullWidth
+          data-testid="sign-in-btn"
           size="large"
           type="submit"
           color="inherit"
