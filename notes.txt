@@ -1,4 +1,4 @@
-- typescript course:
+- typescript course (reddit said its worth looking into idk):
 https://www.udemy.com/course/typescript-the-complete-developers-guide/?couponCode=CP130525
 
 - another typescript free course ??
@@ -8,6 +8,7 @@ https://www.totaltypescript.com/tutorials/beginners-typescript
 https://egghead.io/lessons/react-understand-the-react-component-lifecycle-methods
 
 - choosing a state manager:
+
     = redux toolkit
     = zustand
     = xstate: a big no, super complicated
@@ -18,6 +19,20 @@ https://egghead.io/lessons/react-understand-the-react-component-lifecycle-method
 https://dev.to/yracnet/setting-up-dual-compilation-ssr-csr-in-vitejs-with-vite-plugin-builder-5fme
 
 - check remix cause it seems like it would solve all ur problems lol 
+
+- remix (react router v7) or next 
+
+    = maintainability wise: next 
+    (more likely to find someone who works with next rather tan remix)
+    = seo benefits: next
+    (idk ppl be saying stuff)
+    = requirements wise: remix
+    (it does exactly what we want while also keeping it fairly high performative
+    simpler than next )
+
+- remix solving client state management (not rlly required since we will use a state manager
+anyways but its worth looking into)
+https://www.youtube.com/watch?v=xZSNjzpkHMY
 
 - zustand with react query
 https://www.youtube.com/watch?v=QTZTUrAbjeo&pp=ygUfY2xpZW50IGlkZSByZW5kZXJpbmcgd2l0aCByZW1peA%3D%3D
