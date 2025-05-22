@@ -17,3 +17,7 @@ https://egghead.io/lessons/react-understand-the-react-component-lifecycle-method
 - vite-plugin-builder for dual rendering:
 https://dev.to/yracnet/setting-up-dual-compilation-ssr-csr-in-vitejs-with-vite-plugin-builder-5fme
 
+- check remix cause it seems like it would solve all ur problems lol 
+
+- zustand with react query
+https://www.youtube.com/watch?v=QTZTUrAbjeo&pp=ygUfY2xpZW50IGlkZSByZW5kZXJpbmcgd2l0aCByZW1peA%3D%3D
