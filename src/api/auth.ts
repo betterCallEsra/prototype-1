@@ -3,6 +3,8 @@ import { axiosWithCredentials } from "./Axios";
 type Login = { email: string; password: string };
 
 export const login = async ({ email, password }: Login): Promise<any> => {
+  // if using sanctum, then we will have to get the cookie setup first and then
+  // send our respone to store it there !!
   const response = await axiosWithCredentials.post("/", { email, password });
   return response.data;
 };
