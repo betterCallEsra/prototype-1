@@ -12,4 +12,8 @@ https://egghead.io/lessons/react-understand-the-react-component-lifecycle-method
     = zustand
     = xstate: a big no, super complicated
 
-- redux vs zustand (explanation, )
+- redux vs zustand
+
+- vite-plugin-builder for dual rendering:
+https://dev.to/yracnet/setting-up-dual-compilation-ssr-csr-in-vitejs-with-vite-plugin-builder-5fme
+
