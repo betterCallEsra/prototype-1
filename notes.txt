@@ -34,5 +34,9 @@ https://dev.to/yracnet/setting-up-dual-compilation-ssr-csr-in-vitejs-with-vite-p
 anyways but its worth looking into)
 https://www.youtube.com/watch?v=xZSNjzpkHMY
 
+- remix with mui issues:
+https://github.com/mui/material-ui/issues/39765
+
 - zustand with react query
 https://www.youtube.com/watch?v=QTZTUrAbjeo&pp=ygUfY2xpZW50IGlkZSByZW5kZXJpbmcgd2l0aCByZW1peA%3D%3D
+
