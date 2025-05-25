@@ -2,7 +2,7 @@ import React from "react";
 import type { AxiosError } from "axios";
 
 import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQuery } from "@tanstack/react-query";
 
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
@@ -15,7 +15,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 
 import { useRouter } from "../hooks/use-router";
 
-import { mockLogin as login } from "../api/auth";
+import { login, getMsg } from "../api/auth";
 
 import { Iconify } from "../components/iconify";
 
@@ -23,24 +23,36 @@ export function LoginView() {
   const router = useRouter();
 
   const [showPassword, setShowPassword] = useState(false);
-  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const mutation = useMutation({
     mutationFn: login,
-    onSuccess: () => {
+    onSuccess: (data) => {
+      localStorage.setItem("access_token", data.access_token);
       router.push("/dashboard");
+      setIsLoggedIn(true);
     },
     onError: (error) => {
       const err = error as AxiosError<{ message: string }>;
       setErrorMessage(err.response?.data?.message || "Login failed");
+      console.log(error);
     },
   });
+  const { data } = useQuery({
+    queryKey: ["categories"],
+    queryFn: getMsg,
+    enabled: isLoggedIn,
+  });
+
+  console.log("me content");
+  console.log(data);
 
   const handleSignIn = () => {
     setErrorMessage("");
-    mutation.mutate({ email, password });
+    mutation.mutate({ phone, password });
   };
 
   return (
@@ -72,10 +84,10 @@ export function LoginView() {
       >
         <TextField
           fullWidth
-          inputProps={{ "data-testid": "email-input" }}
-          label="Email address"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          inputProps={{ "data-testid": "phone-input" }}
+          label="phone"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
           sx={{ mb: 3 }}
         />
 

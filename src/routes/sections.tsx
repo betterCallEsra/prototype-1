@@ -1,3 +1,4 @@
+import React from "react";
 import { lazy, Suspense } from "react";
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import Box from "@mui/material/Box";
