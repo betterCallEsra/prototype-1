@@ -2,7 +2,7 @@ import React from "react";
 import type { AxiosError } from "axios";
 
 import { useState } from "react";
-import { useMutation, useQuery } from "@tanstack/react-query";
+import { useMutation } from "@tanstack/react-query";
 
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
@@ -15,7 +15,7 @@ import InputAdornment from "@mui/material/InputAdornment";
 
 import { useRouter } from "../hooks/use-router";
 
-import { login, getMsg } from "../api/auth";
+import { login } from "../api/auth";
 
 import { Iconify } from "../components/iconify";
 
@@ -41,14 +41,14 @@ export function LoginView() {
       console.log(error);
     },
   });
-  const { data } = useQuery({
-    queryKey: ["categories"],
-    queryFn: getMsg,
-    enabled: isLoggedIn,
-  });
+  // const { data } = useQuery({
+  //   queryKey: ["categories"],
+  //   queryFn: getMsg,
+  //   enabled: isLoggedIn,
+  // });
 
-  console.log("me content");
-  console.log(data);
+  // console.log("me content");
+  // console.log(data);
 
   const handleSignIn = () => {
     setErrorMessage("");
