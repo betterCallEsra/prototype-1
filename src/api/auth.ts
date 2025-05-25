@@ -32,45 +32,12 @@ export const login = async ({
   return response.data;
 };
 
-// export const login = async ({
-//   phone,
-//   password,
-// }: Login): Promise<RootObject> => {
-//   // if using sanctum, then we will have to get the cookie setup first and then
-//   // send our respone to store it there !!
-
-//   console.log("this is login info");
-//   console.log(phone);
-//   console.log(password);
-
-//   const response = await axios.post(
-//     "http://192.168.31.206:8000/api/auth/login",
-//     { phone, password }
-//   );
-//   console.log(response.data);
+// export const getMsg = async (): Promise<any> => {
+//   const response = await axiosWithCredentials.get("/api/me", {
+//     headers: {
+//       Authorization: `Bearer ${localStorage.getItem("access_token")}`,
+//     },
+//   });
+//   console.log(response);
 //   return response.data;
-// };
-
-export const getMsg = async (): Promise<any> => {
-  const response = await axiosWithCredentials.get("/api/m   se", {
-    headers: {
-      Authorization: `Bearer ${localStorage.getItem("access_token")}`,
-    },
-  });
-  console.log(response);
-  return response.data;
-};
-
-// export const mockLogin = async ({ email, password }: Login): Promise<any> => {
-//   await new Promise((res) => setTimeout(res, 1000));
-
-//   if (email === "test@test.com" && password === "secure101") {
-//     return { token: "mock-token", user: { name: "Admin User" } };
-//   } else {
-//     const error = new Error("Invalid credentials") as Error & {
-//       response?: { data: { message: string } };
-//     };
-//     error.response = { data: { message: "Invalid email or password" } };
-//     throw error;
-//   }
 // };
