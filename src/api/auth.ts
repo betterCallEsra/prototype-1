@@ -1,4 +1,3 @@
-// import { axiosWithCredentials } from "./Axios";
 import { axiosWithCredentials } from "./Axios";
 
 type LoginInput = { phone: string; password: string };
